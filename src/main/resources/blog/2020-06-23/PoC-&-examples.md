@@ -95,23 +95,22 @@ To make usage of this project you need to:
  - then, for eg. if you got `withResourcesRootDir("blog")` you need to add directory with same name to your resources
  folder, and add some post files, so in the end you will got structure like below:
     ```xml
-    ├── pom.xml
-    └── src
-        └── main
-            ├── java
-            │   └── com
-            │       └── example
-            │           └── demo
-            │               └── DemoApplication.java
-            └── resources
-                ├── application.properties
-                └── blog
-                    ├── 2020-04-20
-                    │   └── example-blog-post.html
-                    ├── 2020-05-01
-                    │   └── ✅-markdown-is-now-supported!.md
-                    └── 2020-06-23
-                        └── PoC-&-examples.md
+    src
+    └── main
+        ├── java
+        │   └── com
+        │       └── example
+        │           └── demo
+        │               └── DemoApplication.java
+        └── resources
+            ├── application.properties
+            └── blog
+                ├── 2020-04-20
+                │   └── example-blog-post.html
+                ├── 2020-05-01
+                │   └── ✅-markdown-is-now-supported!.md
+                └── 2020-06-23
+                    └── PoC-&-examples.md
     ```
  
  - then you can compile & run app in any way you want, eg:
