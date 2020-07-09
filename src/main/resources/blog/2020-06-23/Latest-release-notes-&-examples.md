@@ -1,22 +1,12 @@
 ##### Short project description
->This is very first version of this project - idea is to create easy to use and minimal configured 
+This is very first version of this project - idea is to create easy to use and minimal configured 
 blog engine for spring boot. Then it can be used for example like here, for manage versioning & docs.
 Only  requirements are that file types of posts needs to be HTML or Markdown, 
-and posts needs to be keep in some defined structure, like below:
-```text
-blog
-  ├── 2020-04-20
-  │   └── example-blog-post.html
-  ├── 2020-05-01
-  │   └── ✅-markdown-is-now-supported!.md
-  └── 2020-06-23
-      └── PoC-&-examples.md
-```
-Date format of directories names pattern is `yyyy-mm-dd`.
+and posts needs to be keep in some defined structure.
 
-### Usage & minimal configuration
+### Configuration & usage
 To make usage of this project you need to:
- - add dependency, so for eg. if you're using maven, final pom.xml could look like following:
+ - add dependency, so for eg. if you're using maven, final pom.xml could look like this:
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -52,7 +42,7 @@ To make usage of this project you need to:
      </build>
    </project>
    ```
- - then define `MinimalBlog` bean, eg:
+ - then, define `MinimalBlog` bean, like following:
    ```java   
    @SpringBootApplication
    public class MinimalBlogDemo {
@@ -84,8 +74,13 @@ To make usage of this project you need to:
      }
    }
    ```
- - then, for eg. if you got `withResourcesRootDir("blog")` you need to add directory with same name to your resources
- folder, and add some post files, so in the end you will got structure like below:
+ - define base url for blog in `application.properties`:
+    ```properties
+    blog.baseUrl=/
+    ``` 
+ - and finally - add some posts! Depending on what you set in previous step in `withResourcesRootDir()` method, if same as in example - `"blog"` then,
+ in resources directory you should create `blog` directory. Posts should be placed in date-like named directories, patter is `dd-mm-yyyy`, HTML and Markdown are supported.
+ Final project structure could look like this:
     ```xml
     your-app
     ├── pom.xml
@@ -107,13 +102,13 @@ To make usage of this project you need to:
                     └── 2020-06-23
                         └── PoC-&-examples.html
     ```
- 
- - then you can compile & run app in any way you want, eg:
+ - compile & run everything in any way you want, eg:
     ```bash
    $ mvn spring-boot:run 
-    ```
+    ```   
+🎉 that's everything, enjoy beautiful blog running together with your spring boot app!
 
-### v0.2-09072020 release notes
+### v0.2-09072020 Release notes
  - File based blog engine and minimal layout based on bootstrap and [@mdo](https://twitter.com/mdo) template.
  - Support for `.html` and `.md` files
  
