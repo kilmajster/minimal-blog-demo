@@ -24,9 +24,9 @@ public class MinimalBlogDemo {
         .withResourcesRootDir("blog")
         .withPostsOnPage(1)
         .withAboutContent(// @formatter:off
-						"This is example content of about section, about is great for not too " +
-						"long but also not too short texts quotes, it will be show every time " +
-						"on the main page. This one contain (190) characters! 🎉" // @formatter:on
+          "This is example content of about section, about is great for not too " +
+          "long but also not too short texts quotes, it will be show every time " +
+          "on the main page. This one contain (190) characters! 🎉" // @formatter:on
         ).withElsewhereLinks(Arrays.asList(
             new ElsewhereLink()
                 .withName("Project github page")
@@ -36,7 +36,7 @@ public class MinimalBlogDemo {
                 .withLink("http://www.google.com")
         )).withHideTemplateInfo(false)
         .withTemplateInfoOverride(// @formatter:off
-						"<code>Developed with 🍀 for <a href=\"https://spring.io/projects/spring-boot\">spring-boot</a> " +
-						"by <a href=\"https://github.com/kilmajster\">@kilmajster</a></code>"); // @formatter:on
+          "<code>Developed with 🍀 for <a href=\"https://spring.io/projects/spring-boot\">spring-boot</a> " +
+          "by <a href=\"https://github.com/kilmajster\">@kilmajster</a></code>"); // @formatter:on
   }
 }
