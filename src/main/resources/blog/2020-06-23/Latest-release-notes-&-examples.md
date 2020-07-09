@@ -106,7 +106,7 @@ To make usage of this project you need to:
     ```bash
    $ mvn spring-boot:run 
     ```   
-🎉 that's everything, enjoy beautiful blog running together with your spring boot app!
+🎉 That's everything, enjoy beautiful blog running together with your spring boot app!
 
 ### v0.2-09072020 Release notes
  - File based blog engine and minimal layout based on bootstrap and [@mdo](https://twitter.com/mdo) template.
