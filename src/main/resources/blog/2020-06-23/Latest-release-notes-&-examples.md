@@ -4,9 +4,9 @@ blog engine for spring boot. Then it can be used for example like here, for mana
 Only  requirements are that file types of posts needs to be HTML or Markdown, 
 and posts needs to be keep in some defined structure.
 
-### Configuration & usage
+### 🛠 Configuration & usage
 To make usage of this project you need to:
- - add dependency, so for eg. if you're using maven, final pom.xml could look like this:
+* add dependency, so for eg. if you're using maven, final pom.xml could look like this:
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -42,7 +42,7 @@ To make usage of this project you need to:
      </build>
    </project>
    ```
- - then, define `MinimalBlog` bean, like following:
+* then, define `MinimalBlog` bean, like following:
    ```java   
    @SpringBootApplication
    public class MinimalBlogDemo {
@@ -74,11 +74,11 @@ To make usage of this project you need to:
      }
    }
    ```
- - define base url for blog in `application.properties`:
+* define base url for blog in `application.properties`:
     ```properties
     blog.baseUrl=/
     ``` 
- - and finally - add some posts! Depending on what you set in previous step in `withResourcesRootDir()` method, if same as in example - `"blog"` then,
+* and finally - add some posts! Depending on what you set in previous step in `withResourcesRootDir()` method, if same as in example - `"blog"` then,
  in resources directory you should create `blog` directory. Posts should be placed in date-like named directories, patter is `dd-mm-yyyy`, HTML and Markdown are supported.
  Final project structure could look like this:
     ```xml
@@ -102,13 +102,13 @@ To make usage of this project you need to:
                     └── 2020-06-23
                         └── PoC-&-examples.html
     ```
- - compile & run everything in any way you want, eg:
+* compile & run everything in any way you want, eg:
     ```bash
    $ mvn spring-boot:run 
     ```   
 🎉 That's everything, enjoy beautiful blog running together with your spring boot app!
 
 ### v0.2-09072020 Release notes
- - File based blog engine and minimal layout based on bootstrap and [@mdo](https://twitter.com/mdo) template.
- - Support for `.html` and `.md` files
+* Blog engine with minimal layout based on [Bootstrap](https://getbootstrap.com/) and template made by [@mdo](https://twitter.com/mdo).
+* Support for `.html` and `.md` files
  
